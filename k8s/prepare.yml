@@ -40,7 +40,7 @@
     shell: curl github.com
 
   - name: Setup | install net-tools
-    yum: name=net-tools state=installed
+    package: name=net-tools state=installed
     tags:
       - if_cfg
 
@@ -66,6 +66,7 @@
 
   - name: Setup | Disable firewalld
     service: name=firewalld state=stopped
+    ignore_errors: yes
     tags:
       - stop_fw
 
@@ -97,7 +98,7 @@
       - etcd_uninstall
     
   - name: Unistall etcd
-    yum: name=etcd state=removed
+    package: name=etcd state=removed
     tags:
       - etcd_uninstall
     
@@ -107,6 +108,7 @@
       - /etc/systemd/system/etcd.service
       - /var/lib/etcd
       - /etc/etcd/etcd.conf
+    ignore_errors: yes
     tags:
       - etcd_uninstall
 
@@ -145,7 +147,8 @@
 
 
   - name: yum update
-    shell: yum update -y
+    #shell: yum update -y
+    shell: apt-get update -y
     ignore_errors: yes
 
 - hosts: nodes
@@ -172,5 +175,6 @@
      - kubecfg.key
 
   - name: yum update
-    shell: yum update -y
+    #shell: yum update -y
+    shell: apt-get update -y
     ignore_errors: yes
