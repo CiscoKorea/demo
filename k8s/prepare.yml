@@ -147,8 +147,8 @@
 
 
   - name: yum update
-    #shell: yum update -y
-    shell: apt-get update -y
+    shell: yum update -y
+    #shell: apt-get update -y
     ignore_errors: yes
 
 - hosts: nodes
@@ -175,6 +175,6 @@
      - kubecfg.key
 
   - name: yum update
-    #shell: yum update -y
-    shell: apt-get update -y
+    shell: yum update -y
+    #shell: apt-get update -y
     ignore_errors: yes

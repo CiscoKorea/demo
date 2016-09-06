@@ -5,7 +5,7 @@
   sudo: yes
   vars:
     etc_host_entries: "{{ lookup('file', '.etc_hosts') }}"
-    ssh_username: admin
+    ssh_username: cloud 
 
   tasks:
 
