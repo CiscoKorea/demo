@@ -4,11 +4,11 @@
 
 ## Fill in the info and uncomment (quotes are needed)
 # URL to access the apic
-#APIC_URL: "https://<apic-server-url>:443"
+APIC_URL: "https://10.72.86.21:443"
 
 # apic login info
-#APIC_USERNAME: "admin"
-#APIC_PASSWORD: "password"
+APIC_USERNAME: "admin"
+APIC_PASSWORD: "1234Qwer"
 
 # Physical domain created in APIC for contiv. See README.aci.md for
 # for more information.
@@ -23,6 +23,6 @@
 ## Full path of the leaf nodes connected to your servers.
 ## Do not change the format. Update the pod number and node number
 ## based on your aci. You can add additional nodes as necessary.
-#APIC_LEAF_NODES:
-#    - topology/pod-1/node-101
-#    - topology/pod-1/node-102
+APIC_LEAF_NODES:
+    - topology/pod-1/node-101
+    - topology/pod-1/node-102
