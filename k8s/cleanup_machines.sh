@@ -12,4 +12,4 @@ username=$1
 top_dir=$PWD
 
 # run ansible
-ansible-playbook -i cleanup_list $top_dir/cleanup.yml -e "ansible_ssh_user=$username" -u $username --private-key=~/hyungsok.key
+ansible-playbook -i cleanup_list $top_dir/cleanup.yml -e "ansible_ssh_user=$username" -u $username --private-key=~/$username.key

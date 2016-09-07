@@ -75,4 +75,4 @@ GetContiv
 ./parse_cluster.py $username
 
 # run ansible
-ansible-playbook -i .contiv_k8s_inventory $top_dir/contrib/ansible/cluster.yml --skip-tags "contiv_restart" -e "networking=contiv contiv_fwd_mode=$contivFwdMode localBuildOutput=$top_dir/k8s-$k8sVer/kubernetes/server/bin contiv_bin_path=$top_dir/contiv_bin etcd_peers_group=masters" -u cloud --private-key=~/hyungsok.key
+ansible-playbook -i .contiv_k8s_inventory $top_dir/contrib/ansible/cluster.yml --skip-tags "contiv_restart" -e "networking=contiv contiv_fwd_mode=$contivFwdMode localBuildOutput=$top_dir/k8s-$k8sVer/kubernetes/server/bin contiv_bin_path=$top_dir/contiv_bin etcd_peers_group=masters" -u $username --private-key=~/$username.key

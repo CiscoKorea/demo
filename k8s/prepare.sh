@@ -13,4 +13,4 @@ top_dir=$PWD
 ./parse_cluster.py $username
 
 # run ansible
-ansible-playbook -i .contiv_k8s_inventory $top_dir/prepare.yml --skip-tags "docker_mnt_fix,ssh_key" -u $username --private-key=~/hyungsok.key
+ansible-playbook -i .contiv_k8s_inventory $top_dir/prepare.yml --skip-tags "docker_mnt_fix,ssh_key" -u $username --private-key=~/$username.key
