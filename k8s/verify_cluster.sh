@@ -7,4 +7,4 @@ fi
 
 username=$1
 
-ansible-playbook --inventory-file=.contiv_k8s_inventory verify.yml --private-key=~/hyungsok.key -u $username
+ansible-playbook --inventory-file=.contiv_k8s_inventory verify.yml --private-key=~/$username.key -u $username  

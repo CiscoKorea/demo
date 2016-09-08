@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/Users/hyungsok/mypy/bin/python
+
 import os
 import sys
 import json
