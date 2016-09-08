@@ -1,4 +1,4 @@
-#!/Users/hyungsok/mypy/bin/python
+#!/usr/bin/python
 
 import os
 import sys
