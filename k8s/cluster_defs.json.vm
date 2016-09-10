@@ -1,0 +1,6 @@
+{"master": [{"name": "k8master", "management_ip": "10.72.86.155", "contiv_control_if": "eno16777984", "contiv_control_ip": "10.72.86.155", "contiv_network_if": "eno33557248", "contiv_network_ip": ""}],
+ "nodes" : [{"name": "k8node-01", "management_ip": "10.72.86.156", "contiv_control_if": "eno16777984", "contiv_control_ip": "10.72.86.156", "contiv_network_if": "eno33557248", "contiv_network_ip": "", "max_pods": "40"},
+            {"name": "k8node-02", "management_ip": "10.72.86.157", "contiv_control_if": "eno16777984", "contiv_control_ip": "10.72.86.157", "contiv_network_if": "eno33557248", "contiv_network_ip": "", "max_pods": "40"},
+            {"name": "k8node-03", "management_ip": "10.72.86.158", "contiv_control_if": "eno16777984", "contiv_control_ip": "10.72.86.158", "contiv_network_if": "eno33557248", "contiv_network_ip": "", "max_pods": "40"}
+            ]
+}

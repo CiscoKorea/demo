@@ -26,4 +26,3 @@ APIC_CONTRACTS_UNRESTRICTED_MODE: "no"
 APIC_LEAF_NODES:
     - topology/pod-1/node-1001
     - topology/pod-1/node-1002
-    - topology/pod-1/node-1003
