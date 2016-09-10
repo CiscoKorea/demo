@@ -40,7 +40,14 @@
     shell: curl github.com
 
   - name: Setup | install net-tools
-    package: name=net-tools state=installed
+    yum: name=net-tools state=installed
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+    tags:
+      - if_cfg
+
+  - name: Setup | install net-tools
+    apt: name=net-tools state=installed
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
     tags:
       - if_cfg
 
@@ -98,7 +105,14 @@
       - etcd_uninstall
     
   - name: Unistall etcd
-    package: name=etcd state=removed
+    yum: name=etcd state=removed
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+    tags:
+      - etcd_uninstall
+    
+  - name: Unistall etcd
+    apt: name=etcd state=removed
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
     tags:
       - etcd_uninstall
     
@@ -154,6 +168,7 @@
     shell: yum update -y
     when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
     ignore_errors: yes
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
 - hosts: nodes
   sudo: yes

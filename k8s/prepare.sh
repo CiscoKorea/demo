@@ -14,3 +14,4 @@ top_dir=$PWD
 
 # run ansible
 ansible-playbook -i .contiv_k8s_inventory $top_dir/prepare.yml --skip-tags "docker_mnt_fix,ssh_key" -u $username --private-key=~/$username.key
+# you might need to add ansible_python_interpreter=/usr/bin/python2.7 to the -e list for ubuntu
