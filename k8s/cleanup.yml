@@ -83,3 +83,4 @@
       - /etc/default/netmaster
       - /etc/kubernetes/config
       - /etc/kubernetes/kubelet
+      - /etc/kubernetes

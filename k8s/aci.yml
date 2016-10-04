@@ -12,7 +12,7 @@ APIC_PASSWORD: "1234Qwer"
 
 # Physical domain created in APIC for contiv. See README.aci.md for
 # for more information.
-APIC_PHYS_DOMAIN: "phys-contiv"
+APIC_PHYS_DOMAIN: "phys"
 
 # The following is for cases where BD has to be pre-defined.
 # If you don't know what this means, then you probably don't need to
