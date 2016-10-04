@@ -41,8 +41,7 @@ ConfirmPrompt
 netctl policy create -t bevco app2db
 netctl group create -t bevco -p app2db bevco-net1 sugardb
 netctl group create -t bevco bevco-net1 sodaapp
-netctl policy rule-add -t bevco -d in --protocol tcp --port 6379 --from-group sodaapp -n bevco-net1 --action al
-low app2db 1
+netctl policy rule-add -t bevco -d in --protocol tcp --port 6379 --from-group sodaapp -n bevco-net1 --action allow app2db 1
 
 ConfirmPrompt
 

@@ -168,7 +168,6 @@
     shell: yum update -y
     when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
     ignore_errors: yes
-    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
 - hosts: nodes
   sudo: yes

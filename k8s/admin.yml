@@ -43,6 +43,7 @@
      - kubelet
      - docker
      - netplugin
+    ignore_errors: yes
     tags:
       - stop_contiv
 
@@ -53,6 +54,14 @@
      - contivVlanBridge
      - contivHostBridge
     ignore_errors: yes
+    tags:
+      - erase_state
+
+  - name: cleanup docker-storage-setup 
+    shell: "{{ item }}"
+    with_items:
+      - docker-storage-setup --reset 
+      - rm -rf /var/lib/docker 
     tags:
       - erase_state
 

@@ -1,0 +1,8 @@
+---
+# simple playbook for reboot all nodes
+- hosts: all
+  become: yes
+  vars:
+  tasks:
+    - name: reboot system 
+      shell: reboot 

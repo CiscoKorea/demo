@@ -1,8 +1,8 @@
 [cleanme]
 #hostname ansible_ssh_host=a.b.c.d
-k8master ansible_ssh_host=10.72.86.102
-k8node-01 ansible_ssh_host=10.72.86.103
-k8node-02 ansible_ssh_host=10.72.86.104 
+k8master ansible_ssh_host=10.72.86.101
+k8node01 ansible_ssh_host=10.72.86.102
+k8node02 ansible_ssh_host=10.72.86.103 
 #e.g.
 #ip-172-18-10-194 ansible_ssh_host=24.172.213.65
 #ip-172-18-10-192 ansible_ssh_host=24.172.213.66
